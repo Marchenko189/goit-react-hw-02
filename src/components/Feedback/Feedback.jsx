@@ -1,6 +1,6 @@
 
 
-export default function Feedback({update, total}) {
+export default function Feedback({update, total, positive}) {
     return (
     <div>
         <ul>
@@ -8,7 +8,7 @@ export default function Feedback({update, total}) {
                 <li>Neutral: {update.neutral}</li>
                 <li>Bad: {update.bad}</li>
                 <li>Total: {total}</li>
-                <li>Positive: {Math.round((update.good/ total) * 100)}%</li>
+                <li>Positive: {positive}%</li>
         </ul>
     </div>
     )
